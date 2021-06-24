@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admins-style.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admins</title>
+</head>
+<body>
+    <form method="post">
+    <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Input password to see admins!</div>
+        <div class="input-container ic1">
+          <input id="adminsinput" class="input" type="password" placeholder=" " name="pas" />
+          <div class="cut"></div>
+          <label for="adminsinput" class="placeholder">password</label>
+        </div>
+        <button type="text" class="submit">submit</button>
+      </div>
+        </form>
+</body>
+</html>
+
+{% endblock %}

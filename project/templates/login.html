@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+  {% with messages=get_flashed_messages(with_categories=true) %}
+            {% for cat, msg in messages %}
+            <P class="{{cat}}">{{msg}}</P>
+            {% endfor %}
+        {% endwith %}
+{% endblock %}

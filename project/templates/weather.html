@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <html lang="en">
+      <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style_weather.css')}}">
+        <meta charset="UTF-8">
+        <title>Home</title>
+      </head>
+
+      <body>
+        <form method="post">
+            <div id="cityInput">
+              <label><b>City</b></label>
+              <input type="text" placeholder="Enter City" name="weathername" required>
+            </div>
+            <div id="weatherForm">
+              <p id="weatherInformation" name="weatherinput"> </p>
+            </div>
+        </form>
+
+      </body>
+    </html>
+{% endblock %}

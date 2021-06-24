@@ -1,0 +1,47 @@
+body{
+    align-items: center;
+    background-color: #242325;
+    background-image: url(https://www.elegantthemes.com/blog/wp-content/uploads/2021/04/wordpress-weather-widgets.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#headText{
+    text-align: center;
+}
+
+#weatherForm{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 80px;
+  height: 500px;
+  width: 650px;
+  border: 1px solid;
+  border-color: rgb(23, 22, 26);
+  box-shadow: 0px 0px 50px #000000;
+  border-radius: 5%;
+}
+
+#cityInput{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 10px;
+}
+
+input[type=text] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+p{
+    margin-top: 200px;
+    margin-left: 150px;
+    color: #B3B3B3;
+}

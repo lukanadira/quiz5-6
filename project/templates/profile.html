@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Weather
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profilestyle.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h2 style="text-align:center">Admins</h2>
+    <div id="div_1">
+        <div class="card">
+        <img src="https://logodix.com/logo/1984123.png" alt="Profile Logo">
+        <h1>Name: Luka Nadiradze</h1>
+        <p class="title" style="color: blueviolet;">Info: luka.nadiradze.1@btu.edu.ge </p>
+        <p>Education: Business and technology university</p>
+        <div style="margin: 24px 0;">
+            <a href="#" style="color: rgb(187, 45, 20);"><i class="fa fa-instagram"></i></a> 
+            <a href="#" style="color: darkturquoise;"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#" style="color: darkblue;"><i class="fa fa-facebook"></i></a> 
+        </div>
+        <p><button>Contact</button></p>
+        </div>
+
+        <div class="card">
+            <img src="https://logodix.com/logo/1984123.png" alt="Profile Logo">
+            <h1>Name: Vakho jiqidze </h1>
+            <p class="title" style="color: blueviolet;">Info: vakhtangi.jiqidze.1@btu.edu.ge</p>
+            <p>Education: Business and technology university</p>
+            <div style="margin: 24px 0;">
+                <a href="#" style="color: rgb(187, 45, 20);"><i class="fa fa-instagram"></i></a> 
+                <a href="#" style="color: darkturquoise;"><i class="fa fa-twitter"></i></a>  
+                <a href="#"><i class="fa fa-linkedin"></i></a>  
+                <a href="#" style="color: darkblue;"><i class="fa fa-facebook"></i></a> 
+            </div>
+            <p><button>Contact</button></p>
+            </div>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}

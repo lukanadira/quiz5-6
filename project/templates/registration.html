@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <html lang="en">
+      <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <meta charset="UTF-8">
+        <title>Home</title>
+      </head>
+      <body>
+        <div id="headerr" class="mainText"><h1><p id="headText"><i>Login</i></p></h1></div>
+        <div id="regForm">
+          <form method="post">
+            <div class="imgcontainer">
+              <img src="https://www.seekpng.com/png/full/372-3720163_document-handling-charges-for-registration-registration-icon-png.png" class="avatar">
+            </div>
+
+            <div class="container">
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+
+              <label ><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <label ><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw" required>
+
+              <button type="submit">Login</button>
+               {% with messages=get_flashed_messages(with_categories=true) %}
+            {% for cat, msg in messages %}
+            <P class="{{cat}}">{{msg}}</P>
+            {% endfor %}
+        {% endwith %}
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      </body>
+    </html>
+{% endblock %}
